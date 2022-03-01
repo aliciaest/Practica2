@@ -139,6 +139,8 @@ grafico1<- ggplot(ds, aes(x= MinTemp, y=MaxTemp))
 grafico2<-ggplot(ds, aes(x = MinTemp, y = MaxTemp, colour=RainTomorrow))
 grafico2<-grafico1+geom_point()
 grafico2
+grafico3<-grafico2+ggtitle("Grafico de dispersion")
+grafico3
 ```
 
 ### **Ejercicio 2**
