@@ -322,9 +322,15 @@ Añadir barras de error a un gráfico de línea.
 
 ```{r Solucion ejercicio 5}
 load("./data/Experimento.Rdata")
-str(df3)
-#podemos ver que hay 4 variables que son supp, dose, len y sd
+str(Experimento)
+#podemos ver que hay 4 variables que son Complemento,Dosis, Altura y Error_Altura
 
+grafico<-ggplot(Experimento, aes(x=Dosis, y=Altura, shape=Complemento, linetype=Complemento, colour=Complemento))
+grafico2<- grafico+geom_point()+geom_line()
+
+grafico2 + geom_errorbar(aes(ymin=Altura-Error_Altura, ymax=Altura+Error_Altura), width=.1, position = position_dodge(0.05))
+#es asi como añadimos el error
+  
 ```
 
 ## Gráficos de boxplot con **ggplot2**
