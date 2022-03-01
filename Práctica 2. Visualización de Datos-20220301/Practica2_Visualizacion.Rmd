@@ -187,6 +187,7 @@ iris.grafico1+geom_point()
 
 iris.grafico2<-ggplot(iris.tidy, aes(x=Species, y=Value,  colour=Part))
 iris.grafico2+geom_point()
+iris.grafico2+geom_point()+facet_grid(.~Measure)
 
 
 ```
