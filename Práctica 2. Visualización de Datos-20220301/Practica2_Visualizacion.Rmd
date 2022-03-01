@@ -184,6 +184,11 @@ str(iris.tidy)
 #asi podemos ver que el fichero contiene 4 variables : species, part, measure y value
 iris.grafico1<-ggplot(iris.tidy, aes(x=Species, y=Value))
 iris.grafico1+geom_point()
+
+iris.grafico2<-ggplot(iris.tidy, aes(x=Species, y=Value,  colour=Part))
+iris.grafico2+geom_point()
+
+
 ```
 
 ## Gráficos de línea con **ggplot2**
