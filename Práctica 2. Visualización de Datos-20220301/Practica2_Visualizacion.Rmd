@@ -321,6 +321,9 @@ Añadir barras de error a un gráfico de línea.
 * Almacena en formato **pdf** el gráfico resultante en un fichero denominado ``Ejercicio5.pdf``.
 
 ```{r Solucion ejercicio 5}
+load("./data/Experimento.Rdata")
+str(df3)
+#podemos ver que hay 4 variables que son supp, dose, len y sd
 
 ```
 
