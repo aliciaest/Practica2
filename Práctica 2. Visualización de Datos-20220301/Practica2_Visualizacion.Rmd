@@ -267,6 +267,9 @@ ggplot(data=Dosis.Medicina2, aes(x=Dosis, y=Efectividad, group=Complemento)) +
 
 ```{r Solucion ejercicio 4}
 
+load("./data/Ejercicio4_Data.Rdata")
+str(DatosEjer4)
+#nos encontramos con tres variables que son fecha, fabricante y ventas
 ```
 
 ## Barras de error con **ggplot2**
