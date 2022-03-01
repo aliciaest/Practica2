@@ -270,6 +270,13 @@ ggplot(data=Dosis.Medicina2, aes(x=Dosis, y=Efectividad, group=Complemento)) +
 load("./data/Ejercicio4_Data.Rdata")
 str(DatosEjer4)
 #nos encontramos con tres variables que son fecha, fabricante y ventas
+
+grafico<-ggplot(DatosEjer4, aes(x=Fecha, y = Ventas, colour= Fabricante))
+grafico+geom_point()
+#Diriamos que no es valido porque al estar los puntos dispersos no somos capaces de ver con claridad la evolucion
+
+grafico+geom_point()+geom_line()
+
 ```
 
 ## Barras de error con **ggplot2**
