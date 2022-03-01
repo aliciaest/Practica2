@@ -141,6 +141,7 @@ grafico2<-grafico1+geom_point()
 grafico2
 grafico3<-grafico2+ggtitle("Grafico de dispersion")
 grafico3
+ggsave("Ejercicio1.pdf")
 ```
 
 ### **Ejercicio 2**
