@@ -432,6 +432,15 @@ grafico+labs(title="Histograma de la variable de la altura", x="Altura(cm)", y =
 
 grafico2<-ggplot(f,aes(x=HEIGHT) ) + geom_histogram(breaks=seq(155,195,by=2), bins=20)+ labs(title = "Histograma de la variable de la altura", x="Altura(cm)",y ="Frecuencia")
 grafico2
+
+grafico3<-ggplot(f,aes(x=HEIGHT) ) + geom_histogram(breaks=seq(155,195,by=2), bins=20, fill="Blue", colour="Red",alpha=0.5)+ labs(title = "Histograma de la variable de la altura", x="Altura(cm)",y ="Frecuencia")
+grafico3
+
+grafico4<-grafico3+geom_density(col="Green")
+grafico4
+
+grafico4+facet_grid
+ggsave("Ejercicio7.pdf")
 ```
 
 ## Gráficos de barras con **ggplot2**
