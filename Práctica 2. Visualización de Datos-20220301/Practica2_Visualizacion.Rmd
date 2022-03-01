@@ -275,7 +275,11 @@ grafico<-ggplot(DatosEjer4, aes(x=Fecha, y = Ventas, colour= Fabricante))
 grafico+geom_point()
 #Diriamos que no es valido porque al estar los puntos dispersos no somos capaces de ver con claridad la evolucion
 
-grafico+geom_point()+geom_line()
+grafico2<- grafico+geom_point()+geom_line(linetype="dashed")
+#asi cambiamos el tipo de linea
+
+grafico2+ggtitle("Ventas mensuales de diferentes compañías tecnológicas")
+ggsave("Ejercicio4.pdf")
 
 ```
 
