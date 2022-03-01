@@ -189,6 +189,9 @@ iris.grafico2<-ggplot(iris.tidy, aes(x=Species, y=Value,  colour=Part))
 iris.grafico2+geom_point()
 iris.grafico2+geom_point()+facet_grid(.~Measure)
 
+iris.grafico2+geom_jitter()+facet_grid(.~Measure)
+#la diferencia es que en este caso los puntos estan mas espaciados y podemos interpretar mejor la informacion
+ggsave("Ejercicio3.pdf")
 
 ```
 
