@@ -136,6 +136,7 @@ p2
 ```{r Solucion ejercicio 1}
 load("./data/weatherAUS.RData")
 grafico1<- ggplot(ds, aes(x= MinTemp, y=MaxTemp))
+grafico1
 grafico2<-ggplot(ds, aes(x = MinTemp, y = MaxTemp, colour=RainTomorrow))
 grafico2<-grafico1+geom_point()
 grafico2
@@ -153,7 +154,11 @@ ggsave("Ejercicio1.pdf")
 * Almacena en formato **pdf** el gráfico resultante en un fichero denominado ``Ejercicio2.pdf``.
 
 ```{r Solucion ejercicio 2}
-
+grafico<- ggplot(ds, aes(x= Temp9am, y=Pressure9am))
+grafico
+grafico<- ggplot(ds, aes(x= Temp9am, y=Pressure9am, colur=RainToday))
+grafico2<-grafico+geom_point()
+grafico2
 ```
 
 ### **Ejercicio 3**
