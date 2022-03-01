@@ -179,7 +179,7 @@ ggsave("Ejercicio2.pdf")
 * Almacena en formato **pdf** el gráfico resultante en un fichero denominado ``Ejercicio3.pdf``.
 
 ```{r Solucion ejercicio 3}
-
+load("./data/iris_tidy.Rdata")
 ```
 
 ## Gráficos de línea con **ggplot2**
