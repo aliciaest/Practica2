@@ -156,9 +156,13 @@ ggsave("Ejercicio1.pdf")
 ```{r Solucion ejercicio 2}
 grafico<- ggplot(ds, aes(x= Temp9am, y=Pressure9am))
 grafico
-grafico<- ggplot(ds, aes(x= Temp9am, y=Pressure9am, colur=RainToday))
+
+grafico<- ggplot(ds, aes(x= Temp9am, y=Pressure9am, shape=RainToday))
 grafico2<-grafico+geom_point()
-grafico2
+
+grafico3<-ggplot(ds, aes(x= Temp9am, y=Pressure9am, shape=RainToday, colour=RainToday))
+grafico4<-grafico3+ geom_point()
+grafico4
 ```
 
 ### **Ejercicio 3**
