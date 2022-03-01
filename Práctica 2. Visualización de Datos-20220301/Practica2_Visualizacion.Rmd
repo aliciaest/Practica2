@@ -326,11 +326,14 @@ str(Experimento)
 #podemos ver que hay 4 variables que son Complemento,Dosis, Altura y Error_Altura
 
 grafico<-ggplot(Experimento, aes(x=Dosis, y=Altura, shape=Complemento, linetype=Complemento, colour=Complemento))
-grafico2<- grafico+geom_point()+geom_line()
+grafico+geom_point()+geom_line()
 
-grafico2 + geom_errorbar(aes(ymin=Altura-Error_Altura, ymax=Altura+Error_Altura), width=.1, position = position_dodge(0.05))
+grafico+geom_point()+ geom_line() + geom_errorbar(aes(ymin=Altura-Error_Altura, ymax=Altura+Error_Altura), width=.1, position = position_dodge(0.05))
 #es asi como añadimos el error
   
+grafico+ geom_errorbar(aes(ymin=Altura-Error_Altura, ymax=Altura+Error_Altura), width=.1, position = position_dodge(0.05))
+
+ggsave("Ejercicio5.pdf")
 ```
 
 ## Gráficos de boxplot con **ggplot2**
